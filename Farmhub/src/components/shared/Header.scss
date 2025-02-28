@@ -1,0 +1,157 @@
+.homepage__header {
+    background-image: url('/nen.jpg'); /* Đường dẫn đến hình nền */
+    background-size: 100% auto; /* Đảm bảo ảnh phủ chiều rộng của viewport */
+    background-position: center; /* Đặt hình nền vào giữa */
+    background-attachment: fixed; /* Giữ cố định hình nền khi cuộn */
+    width: 100vw; /* Chiều rộng của header là 100% chiều rộng của viewport */
+    height: 100px; /* Đặt chiều cao cố định cho header */
+    margin: 0; /* Loại bỏ khoảng trống ngoài */
+    padding: 0; /* Loại bỏ padding bên trong */
+    box-sizing: border-box; /* Bao gồm padding và border trong tính toán chiều rộng và chiều cao */
+    position: fixed; /* Giữ header cố định khi cuộn */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Đảm bảo header luôn nằm trên các phần tử khác */
+    background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ mờ cho hình nền */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    display: flex; /* Dùng Flexbox cho layout */
+    justify-content: space-between; /* Căn đều các phần tử trong header */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.homepage__logo img {
+    height: 50px; /* Điều chỉnh kích thước logo */
+    width: auto;
+}
+
+.homepage__nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.homepage__nav ul li {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.homepage__nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.homepage__nav ul li a:hover {
+    color: #24a137;
+}
+
+.homepage__login-search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.homepage__search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.homepage__search-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 200px;
+    min-width: 150px;
+}
+
+.homepage__search-btn {
+    padding: 10px 20px;
+    background-color: #24a137;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.homepage__search-btn:hover {
+    background-color: #1f8b29;
+}
+
+.homepage__login-btn {
+    padding: 10px 20px;
+    background-color: #24a137;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.homepage__login-btn:hover {
+    background-color: #1f8b29;
+}
+
+.homepage__footer {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    padding: 20px 0;
+    background: #f1f1f1;
+    width: 100%;
+}
+
+/* Điều chỉnh cho màn hình nhỏ hơn */
+@media screen and (max-width: 1024px) {
+    .homepage__header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; /* Tự động điều chỉnh chiều cao */
+        padding: 20px;
+    }
+
+    .homepage__logo img {
+        height: 40px;
+    }
+
+    .homepage__nav ul {
+        gap: 20px;
+    }
+
+    .homepage__search-input {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .homepage__header {
+        padding: 10px 15px;
+    }
+
+    .homepage__nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .homepage__login-search {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .homepage__search-input {
+        width: 100%;
+    }
+
+    .homepage__search-btn {
+        width: 100%;
+    }
+
+    .homepage__login-btn {
+        width: 100%;
+    }
+}

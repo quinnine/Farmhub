@@ -6,6 +6,7 @@ import News from "./components/News"; // Trang tin tức
 import Weather from "./components/Weather"; // Trang thời tiết
 import Notes from "./components/Notes"; // Trang nhật ký
 import LoginForm from "./components/Login"; // Trang Login
+
 import './App.css';
 
 function App() {
