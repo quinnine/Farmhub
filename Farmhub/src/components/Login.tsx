@@ -5,14 +5,17 @@ const LoginForm: React.FC = () => {
         <div 
             className="d-flex justify-content-center align-items-center vh-100 w-100 position-relative"
             style={{
-                backgroundImage: "url('/National Donations Platform.gif')",
+                backgroundImage: "url('plants-green-nature-leaves-photography-2117193-wallhere.com.jpg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
             }}
         >
-            <form className="login-form bg-light bg-opacity-50 p-4 rounded-4 shadow-lg">
-                <h1 className="text-center mb-4">Login</h1>
+            <form 
+                className="login-form bg-light bg-opacity-25 p-5 rounded-4 shadow-lg"
+                style={{ maxWidth: '450px', width: '90%' }}
+            >
+                <h1 className="text-center mb-4" style={{ fontSize: '2.5rem' }}>Login</h1>
 
                 <div className="mb-3 position-relative">
                     <input
@@ -20,7 +23,7 @@ const LoginForm: React.FC = () => {
                         id="username"
                         name="username"
                         placeholder="Username"
-                        className="form-control ps-3 pe-5 rounded-pill bg-transparent text-white"
+                        className="form-control ps-3 pe-5 rounded-pill bg-transparent text-white py-3"
                         required
                     />
                     <i className="fa fa-user position-absolute end-0 top-50 translate-middle-y me-3 text-dark"></i>
@@ -32,7 +35,7 @@ const LoginForm: React.FC = () => {
                         id="password"
                         name="password"
                         placeholder="Password"
-                        className="form-control ps-3 pe-5 rounded-pill bg-transparent text-white"
+                        className="form-control ps-3 pe-5 rounded-pill bg-transparent text-white py-3"
                         required
                     />
                     <i className="fa fa-lock position-absolute end-0 top-50 translate-middle-y me-3 text-dark"></i>
@@ -42,7 +45,11 @@ const LoginForm: React.FC = () => {
                     <a href="#" className="text-dark">Forgot Password?</a>
                 </div>
 
-                <button type="submit" className="btn btn-warning w-50 rounded-pill d-block mx-auto">
+                <button 
+                    type="submit" 
+                    className="btn btn-success w-50 rounded-pill d-block mx-auto py-3"
+                    style={{ fontSize: '1.2rem' }}
+                >
                     Login
                 </button>
 
